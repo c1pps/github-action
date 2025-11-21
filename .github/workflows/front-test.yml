@@ -19,3 +19,12 @@ jobs:
 
       - name: Lance les test
         run: npm run test
+
+      - name: Run Lighthouse CI
+        run: npm run lhci autorun
+
+      - name: Upload Lighthouse CI results
+        uses: actions/upload-artifact@v4
+        with:
+          name: lighthouse-results
+          path: ./.lighthouse
