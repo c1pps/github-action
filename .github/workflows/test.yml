@@ -1,0 +1,13 @@
+name: Test CLI Pipeline
+
+on:
+  push:
+    branches: ["**"]
+
+jobs:
+  hello-world-cli:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Afficher message Hello-world-cli
+        run: echo "Hello World CLI !"
