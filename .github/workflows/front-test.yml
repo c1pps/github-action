@@ -12,10 +12,10 @@ jobs:
       - name: Récup du code
         uses: actions/checkout@v4
         with:
-        node-version: 22
+          node-version: 22
 
       - name: Installation node modules
-        run: npm ci
+        run: npm i  
 
       - name: Lance les test
         run: npm run test
