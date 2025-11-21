@@ -11,7 +11,8 @@ jobs:
     steps:
       - name: Récup du code
         uses: actions/checkout@v4
-        with:
+        
+      with:
         node-version: 22
 
       - name: Installation node modules
