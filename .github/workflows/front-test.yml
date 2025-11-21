@@ -1,0 +1,21 @@
+name: front-test
+
+on:
+  push:
+    branches: ["**"]
+
+jobs:
+  front-unit-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Récup du code
+        uses: actions/checkout@v4
+        with:
+        node-version: 25
+
+      - name: Installation node modules
+        run: npm ci
+
+      - name: Lance les test
+        run: npm run test
